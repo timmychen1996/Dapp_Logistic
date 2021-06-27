@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tracking Platform Test</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <style>
+    .margin-top-1 {
+      margin-top: 2em;
+    }
+    a {
+      color: #339900;
+      text-decoration: none
+    }
+    a:focus,
+    a:hover {
+      color: #339900;
+      text-decoration: underline
+    }
+
+    input[type="textBillofladingid"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textShipper"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textConsignee"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textNotifyParty"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPreCarriageBy"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPlaceofReceipt"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textOceanVesselVoyNo"]{
+    width: 165px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textPortofLoading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textPortofDischarge"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+    
+    input[type="textFreightandCharges"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textFinalDestination"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textFreightPayableAt"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textMarksandNumbers"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textDescription"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textGrossWeight"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textMeasurement"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textTotalPackages"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+    
+    input[type="textPlaceandDateofIssue"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type="textSignedfortheCarrier"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    button[type = "billofladingadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px; 
+    }
+
+    button[type = "productadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px; 
+    }
+
+    button[type = "letterofcreditadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px; 
+    }
+
+    button[type = "productupdate"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px; 
+    }
+
+    button[type = "productroutequery"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px; 
+    }
+
+
+
+    input[type = "textproductid"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textproductname"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcompanyname"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdispatchtime"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textreceivetime"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdispatchamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textreceiveamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textprice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textexporter"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textconsignee"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textmeansoftransportandroute"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textincoterns"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textbilloflading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textnumberanddateofinvoice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcertificatenumber"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcompanyaddress"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdangerousorflammablecargo"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textproductstatus"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textproductidupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textreceivetimeupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdispatchtimeupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textreceiveamountupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdispatchamountupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdangerousorflammablecargoupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textproductstatusupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textshipperC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textnotifypartyC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "texttelephoneC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textairlinenameC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textportofloadingC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textportofdischargeC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdestinationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textloadingC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdurationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textsettlementwayC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdomestictransportationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcargostoragelocationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcontainershipmentsC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcabinetrequirementsC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcargoinformationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textnetweightC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textgrossweightC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textsizeC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textsignatureC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textshippingfreightprepaidC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textapplicationdate"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcommercialinvoice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textconfirmation"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textapplicant"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textbilloflading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textstartendpoint"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textmethodofinfo"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textmarineinsurancepolicy"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textfinalshipment"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textletterofcreditamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textotherdocuments"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textpartialshipment"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textvalidationdate"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textbeneficiarystatement"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "texttransport"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textbeneficiary"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textcargocontent"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textdrawer"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textspecialterms"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textbillofexchangedeadline"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "texttransferrules"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px; 
+    }
+
+    input[type = "textproductexportcountry"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;   
+    }
+
+    input[type = "textproductimportcountry"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductexportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductimportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;  
+    }
+
+    input[type= "queryproductrouteexport"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+    
+    /*2020/7/20 新加的*/
+    input[type= "textproductrouteexportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type= "textproductrouteimportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductroutequery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+    
+  </style>
+</head>
+
+<body class="container" style="width:1200px;">
+  <h2 style="text-align:center">物流資訊平台</h2>
+  <div id="product_bill_of_lading_logout">
+      <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#sectionA" id="home_tab"><i class="fa fa-th-list"></i>Product Status</a></li>
+        <li class="active"><a>登出</a></li>
+      </ul>
+  </div>
+  <div class="tab-content">
+    <div id="sectionA" class="tab-pane fade">
+
+      <form role="form">
+        <div class="panel panel-default margin-top-1">
+            <div class="panel-heading">
+
+              <label for = "ProductTransferstatus">貨物狀態查詢/操作</h3>
+            </div>
+
+            <div class="panel-body">
+
+               <div class="form">
+                 <div class="form-box1">
+                   
+                   <div class="form-box1-02">
+                    <label for="select">單位:</label>
+
+                        <select name="account_two_operation_Importer_product" id="account_two_operation_Importer_product">
+
+                          <option value="港口A">港口A</option>
+                          <option value="港口B">港口B</option>
+                          <option value="港口C">港口C</option>
+
+
+                        </select>
+                    <label for="select">選項:</label>
+                        <select name="account_two_operation_Importer_product_unit" id="account_two_operation_Importer_product_unit">
+                           <option value></option>
+                           <option value="提貨">提貨</option>
+                        </select>
+                        <input type="button" id="Productstatussubmit_Importer" value="查詢">
+                        <input type="button" id="Productstatuscheck_Importer" value="檢查">
+                   </div>
+                   <div id="ProductstatusImporter" class="form-box1-03">
+                        <label id="Producttransferstate_Importer" for="name">目前貨物狀態:<span></span></label>
+                   </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+        <div class="panel panel-default margin-top-1">
+
+            <div class="panel-heading">
+              <label for = "ProductRecords">貨物移轉紀錄查詢</label>
+
+            </div>
+
+            <div class="panel-body">
+                <table id="Products_record_table" class="table table-striped">
+                  <thread>
+                     <tr>
+                       <th>單位一</th>
+                       <th>地點</th>
+                       <th>時間</th>
+                       <th>貨物狀態</th>
+                     </tr>
+                  </thread>
+                </table>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./routes/product.js"></script>
+</html>

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking Platform Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+    .margin-top-1 {
+      margin-top: 1em;
+    }
+
+
+    a {
+      color: #339900;
+      text-decoration: none
+    }
+    a:focus,
+    a:hover {
+      color: #339900;
+      text-decoration: underline
+    }
+
+    input[type="textBillofladingid"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textShipper"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textConsignee"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textNotifyParty"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPreCarriageBy"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPlaceofReceipt"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textOceanVesselVoyNo"]{
+    width: 165px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPortofLoading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPortofDischarge"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textFreightandCharges"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textFinalDestination"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textFreightPayableAt"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textMarksandNumbers"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textDescription"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textGrossWeight"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textMeasurement"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textTotalPackages"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPlaceandDateofIssue"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textSignedfortheCarrier"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    button[type = "billofladingadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "productadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "letterofcreditadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "productupdate"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "productroutequery"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+
+
+    input[type = "textproductid"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductname"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcompanyname"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchtime"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceivetime"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceiveamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textprice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textexporter"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textconsignee"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textmeansoftransportandroute"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textincoterns"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbilloflading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textnumberanddateofinvoice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcertificatenumber"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcompanyaddress"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdangerousorflammablecargo"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductstatus"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductidupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceivetimeupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchtimeupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceiveamountupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchamountupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdangerousorflammablecargoupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductstatusupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textshipperC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textnotifypartyC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "texttelephoneC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textairlinenameC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textportofloadingC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textportofdischargeC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdestinationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textloadingC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdurationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textsettlementwayC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdomestictransportationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcargostoragelocationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcontainershipmentsC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcabinetrequirementsC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcargoinformationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textnetweightC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textgrossweightC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textsizeC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textsignatureC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textshippingfreightprepaidC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textapplicationdate"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcommercialinvoice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textconfirmation"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textapplicant"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbilloflading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textstartendpoint"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textmethodofinfo"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textmarineinsurancepolicy"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textfinalshipment"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textletterofcreditamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textotherdocuments"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textpartialshipment"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textvalidationdate"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbeneficiarystatement"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "texttransport"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbeneficiary"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcargocontent"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdrawer"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textspecialterms"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbillofexchangedeadline"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "texttransferrules"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductexportcountry"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductimportcountry"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductexportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductimportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type= "queryproductrouteexport"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    /*2020/7/20 新加的*/
+    input[type= "textproductrouteexportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type= "textproductrouteimportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductroutequery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+    /*2020/11/27*/
+    .BL-title{
+        font-size: 20px;
+    }
+
+  </style>
+</head>
+
+<body class="container" style="width:1200px;">
+<h2 style="text-align:center">物流資訊平台</h2>
+<div id="product_bill_of_lading_logout">
+    <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#sectionA" id="home_tab"><i class="fa fa-university"></i> Bill of Lading</a></li>
+        <li><a data-toggle="tab" href="#sectionB" id="product_tab"><i class="fa fa-user"></i> Product</a></li>
+
+        <li><a data-toggle="tab" href="#sectionC" id="signature_tab"><i class="fa fa-file-text-o"></i> Signature</a></li>
+
+        <li><a data-toggle="tab" href="#sectionD" id="letter_of_credit_tab"><i class="fa fa-copy"></i> Letter Of Credit</a></li>
+        <li class="active"><a>登出</a></li>
+    </ul>
+</div>
+<div class="tab-content">
+
+    <div id="sectionA" class="tab-pane fade">
+        <div class="panel panel-default margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">提單
+                    <div class="btn-group pull-right" style="margin-top:-8px;">
+                        <button class="btn btn-default">全部</button>
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="./BL_info_Carrier.html">提單查詢</a></li>
+                        </ul>
+                    </div>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <table id="Bill_of_ladings_table" class="table table-striped">
+                    <thread>
+                        <tr>
+                            <th>提單編號</th>
+                            <th>提單日期</th>
+                            <th>提單狀態</th>
+                        </tr>
+                    </thread>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionB" class="tab-pane fade">
+        <div class="panel panel-default margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">貨物
+                    <div class="btn-group pull-right" style="margin-top:-8px;">
+                        <button class="btn btn-default">全部</button>
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="./product_info_Carrier.html">貨物查詢</a></li>
+                        </ul>
+                    </div>
+                </h3>
+            </div>
+            <div class="panel-body">
+
+                <table id="Products_table" class="table table-striped">
+                    <thread>
+                        <tr>
+                            <th>貨物編號</th>
+                            <th>貨物登記日期</th>
+                            <th>貨物狀態</th>
+                        </tr>
+                    </thread>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="sectionC" class="tab-pane fade">
+        <div class="panel panel-default margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">數位簽章</h3>
+            </div>
+            <div class="panel-body">
+                <table id="Signatures_table" class="table table-striped">
+                    <thread>
+                        <tr>
+                            <th>數位簽章編號</th>
+                            <th>簽章來源</th>
+                        </tr>
+                    </thread>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="sectionD" class="tab-pane fade">
+        <div class="panel panel-success margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">信用狀資訊</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td colspan="6">信用狀流水號:</td>
+                        <td colspan="24">
+                            <input type="text" class="form-control text-center" id="letterofcreditCodeD" placeholder="Letter of Credit ID">
+                        </td>
+                    </tr>
+                    <tr>
+                        <div align="center" style="position:relative;top:10px">
+                            <td colspan="24" style="text-align:center" align="center">
+                                <button id="okBtnD" class="btn btn-success">提交</button>
+                            </td>
+                    </tr>
+                    <tr>
+
+                        <td colspan="6" >申請日期:</td>
+                        <td id="applicationdateD"></td>
+
+                        <td colspan="6" >商業發票:</td>
+                        <td id="commercialinvoiceD"></td>
+
+                        <td colspan="6" >保兌:</td>
+                        <td id="confirmationD"></td>
+
+                        <td colspan="6" >申請人:</td>
+                        <td id="applicantD"></td>
+
+
+                    </tr>
+                    <tr>
+                        <td colspan="6" >海運提單:</td>
+                        <td id="billofladingD"></td>
+
+                        <td colspan="6" >運輸起訖點:</td>
+                        <td id="startendpointD"></td>
+
+                        <td colspan="6" >通知方式:</td>
+                        <td id="methodofinfoD"></td>
+
+                        <td colspan="6" >水險保單:</td>
+                        <td id="marineinsurancepolicyD"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">最後裝運日:</td>
+                        <td id="finalshipmentD"></td>
+
+                        <td colspan="6">信用狀金額:</td>
+                        <td id="letterofcreditamountD"></td>
+
+                        <td colspan="6">其他單據:</td>
+                        <td id="otherdocumentsD"></td>
+
+                        <td colspan="6">分批裝運:</td>
+                        <td id="partialshipmentD"></td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="6">押匯有效日期:</td>
+                        <td id="validationdateD"></td>
+
+                        <td colspan="6">受益人聲明書:</td>
+                        <td id="beneficiarystatementD"></td>
+
+                        <td colspan="6">轉運:</td>
+                        <td id="transportD"></td>
+
+                        <td colspan="6">受益人:</td>
+                        <td id="beneficiaryD"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">貨物內容:</td>
+                        <td id="cargocontentD"></td>
+
+                        <td colspan="6" >被出票人:</td>
+                        <td id="drawerD"></td>
+
+                        <td colspan="6" >特別條款:</td>
+                        <td id="specialtermsD"></td>
+
+                        <td colspan="6" >匯票兌付期限:</td>
+                        <td id="billofexchangedeadlineD"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" >轉讓規定:</td>
+                        <td id="transferrulesD"></td>
+
+                        <td colspan="6" >信用狀登記日期:</td>
+                        <td id="letterofcreditdayD"></td>
+
+                        <td colspan="6" >信用狀登記時間:</td>
+                        <td id="letterofcredittimeD"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6">
+                            <button id="okBtnClearD" class="btn btn-success">清除</button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form role="form">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+
+                    <label for = "LoCTransferstatus">信用狀移轉狀態查詢</h3>
+                </div>
+
+                <div class="panel-body" >
+
+                    <div class="form">
+                        <div class="form-box1">
+                            <div class="form-box1-01">
+                                <label for="select">單位:</label>
+                                <select name="account_two_operation" id="account_two_operation">
+                                    <option value="0x3C95107cAd460D3989F2dB09606BB436c2f47482">
+                                        0x3C95107cAd460D3989F2dB09606BB436c2f47482(進口商)</option>
+                                    <option value="0x3cF2DEdffC74ab8776f61C2d7F261c121c16F45c">
+                                        0x3cF2DEdffC74ab8776f61C2d7F261c121c16F45c(通知銀行)</option>
+                                    <option value="0xCE6C125D972360dfe3A21d1d7BC48D91b27fcd28">
+                                        0xCE6C125D972360dfe3A21d1d7BC48D91b27fcd28(船公司)</option>
+                                </select>
+                                <label for="select">選項:</label>
+                                <select name="account_two_operation_option_exporter" id="account_two_operation_option_exporter">
+                                    <option value="建立交易">建立交易</option>
+                                    <option value="接受並確認交易">接受並確認交易</option>
+                                    <option value="洽訂艙位">洽訂艙位</option>
+                                    <option value="裝船">裝船</option>
+                                    <option value="裝船通知">裝船通知</option>
+                                    <option value="辦理押匯">辦理押匯</option>
+                                </select>
+                            </div>
+                            <div class="form-box1-02">
+                                <label for="select">單位:</label>
+                                <select name="account_two_status" id="account_two_status" >
+                                    <option value="0x3C95107cAd460D3989F2dB09606BB436c2f47482">
+                                        0x3C95107cAd460D3989F2dB09606BB436c2f47482(進口商)</option>
+                                    <option value="0x3cF2DEdffC74ab8776f61C2d7F261c121c16F45c">
+                                        0x3cF2DEdffC74ab8776f61C2d7F261c121c16F45c(通知銀行)</option>
+                                    <option value="0xCE6C125D972360dfe3A21d1d7BC48D91b27fcd28">
+                                        0xCE6C125D972360dfe3A21d1d7BC48D91b27fcd28(船公司)</option>
+                                </select>
+                                <label for="name">輸入公鑰:<input type="text" id="name" placeholder="公鑰名稱"></label>
+                                <button type = "submit" id="LoCstatussubmit_exporter" class = "btn btn-success" > 提交 </button>
+                            </div>
+                            <div class="form-box1-03">
+                                <label id="LoCtransferstate_exporter" for="name">信用狀移轉狀態:</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">新增信用狀</h3>
+            </div>
+            <div class="panel-body" >
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+
+                        <td>申請日期:</td>
+                        <td>
+                            <input type="textapplicationdate" class="form-control text-center" id="addapplicationdateD" placeholder="Application Date" >
+                        </td>
+
+                        <td>商業發票:</td>
+                        <td>
+                            <input type="textcommercialinvoice" class="form-control text-center" id="addcommercialinvoiceD" placeholder="Commercial Invoice" >
+                        </td>
+
+                        <td>保兌:</td>
+                        <td>
+                            <input type="textconfirmation" class="form-control text-center" id="addconfirmationD" placeholder="Confirmation" >
+                        </td>
+
+                        <td>申請人:</td>
+                        <td>
+                            <input type="textapplicant" class="form-control text-center" id="addapplicantD" placeholder="Applicant" >
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>海運提單:</td>
+                        <td>
+                            <input type="textbilloflading" class="form-control text-center" id="addbillofladingD"  placeholder="Bill of Lading" >
+                        </td>
+
+                        <td>運輸起訖點:</td>
+                        <td>
+                            <input type="textstartendpoint" class="form-control text-center" id="addstartendpointD"  placeholder="Start End Point" >
+                        </td>
+
+                        <td>通知方式:</td>
+                        <td>
+                            <input type="textmethodofinfo" class="form-control text-center" id="addmethodofinfoD" placeholder="Method Of Info" >
+                        </td>
+
+                        <td>水險保單:</td>
+                        <td>
+                            <input type="textmarineinsurancepolicy" class="form-control text-center" id="addmarineinsurancepolicyD" placeholder="Marine Insurance Policy" >
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>最後裝運日:</td>
+                        <td>
+                            <input type="textfinalshipment" class="form-control" id="addfinalshipmentD" style="text-align: center" placeholder="Final Shipment" >
+                        </td>
+
+                        <td>信用狀金額:</td>
+                        <td>
+                            <input type="textletterofcreditamount" class="form-control" id="addletterofcreditamountD" style="text-align: center" placeholder="Letter Of Credit Amount" >
+                        </td>
+
+                        <td>其他單據:</td>
+                        <td>
+                            <input type="textotherdocuments" class="form-control" id="addotherdocumentsD" style="text-align: center" placeholder="Other Documents" >
+                        </td>
+
+                        <td>分批裝運:</td>
+                        <td>
+                            <input type="textpartialshipment" class="form-control" id="addpartialshipmentD" style="text-align: center" placeholder="Partial Shipment" >
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>押匯有效日期:</td>
+                        <td>
+                            <input type="textvalidationdate" class="form-control" id="addvalidationdateD" style="text-align: center" placeholder="Validation Date" >
+                        </td>
+
+                        <td>受益人聲明書:</td>
+                        <td>
+                            <input type="textbeneficiarystatement" class="form-control"
+                                   id="addbeneficiarystatementD" style="text-align: center" placeholder="Beneficiary Statement" >
+                        </td>
+
+                        <td>轉運:</td>
+                        <td>
+                            <input type="texttransport" class="form-control"
+                                   id="addtransportD" style="text-align: center" placeholder="Transport" >
+                        </td>
+
+                        <td>受益人:</td>
+                        <td>
+                            <input type="textbeneficiary" class="form-control"
+                                   id="addbeneficiaryD" style="text-align: center" placeholder="Beneficiary" >
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>貨物內容:</td>
+                        <td>
+                            <input type="textcargocontent" class="form-control"
+                                   id="addcargocontentD" style="text-align: center" placeholder="Cargo Content" >
+                        </td>
+
+                        <td>被出票人:</td>
+                        <td>
+                            <input type="textdrawer" class="form-control"
+                                   id="adddrawerD" style="text-align: center" placeholder="Drawer" >
+                        </td>
+
+                        <td>特別條款:</td>
+                        <td>
+                            <input type="textspecialterms" class="form-control"
+                                   id="addspecialtermsD" style="text-align: center" placeholder="Special Terms" >
+                        </td>
+
+                        <td>匯票兌付期限:</td>
+                        <td>
+                            <input type="textbillofexchangedeadline" class="form-control"
+                                   id="addbillofexchangedeadlineD" style="text-align: center" placeholder="Bill of Exchange Deadline" >
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>轉讓規定:</td>
+                        <td>
+                            <input type="texttransferrules" class="form-control"
+                                   id="addtransferrulesD" style="text-align: center" placeholder="Transfer Rules" >
+                        </td>
+
+                        <td style="text-align:center">
+                            <button type = "letterofcreditadd" id="okBtnUpdateD" class="btn btn-success">新增</button>
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script href = "./routes/product.js"></script>
+
+</html>

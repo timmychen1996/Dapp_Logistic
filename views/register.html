@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page nhaha</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/register.css">
+</head>
+
+<body class="my-register-page">
+<section class="h-100">
+  <div class="container h-100">
+    <h2 style="text-align:center">註冊</h2>
+    <div class="row justify-content-md-center h-100">
+      <div class="card-wrapper">
+
+        <form action="/register/userregister" method="post">
+
+          <div class="form-group">
+            <label for="account">帳號<span style="color:red">*</span></label>
+            <input id="useraccount" type="text" class="form-control" name="useraccount" required autofocus>
+          </div>
+
+          <div class="form-group">
+            <label for="password">密碼<span style="color:red">*</span></label>
+            <input id="userpassword" type="password" class="form-control" name="userpassword" required autofocus>
+          </div>
+
+          <div class="form-group">
+            <label for="password">確認密碼<span style="color:red">*</span></label>
+            <input id="userpasswordcheck" type="password" class="form-control" name="userpasswordcheck" required autofocus>
+          </div>
+
+
+          <div class="form-group">
+            <label for="roleoption">職業類別</label>
+            <select class="usercareer" name="usercareer" >
+              <option value="Exporter">Exporter</option>
+              <option value="Importer">Importer</option>
+              <option value="Carrier">Carrier</option>
+            </select>
+          </div>
+
+          <div class="form-group text-center">
+
+            <button type="submit" id="okBtnRegisterA"  class="btn btn-info" >Register</button>
+          </div>
+
+        </form>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script href = "./routes/register.js"></script>
+
+
+</html>

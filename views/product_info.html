@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking Platform Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+    .margin-top-1 {
+      margin-top: 1em;
+    }
+    a {
+      color: #339900;
+      text-decoration: none
+    }
+    a:focus,
+    a:hover {
+      color: #339900;
+      text-decoration: underline
+    }
+
+    input[type="textBillofladingid"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textExporter"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textImporter"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textNotifyParty"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPreCarriageBy"] {
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPlaceofReceipt"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textOceanVesselVoyNo"]{
+    width: 165px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPortofLoading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPortofDischarge"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textFreightandCharges"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textFinalDestination"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textFreightPayableAt"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textMarksandNumbers"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textDescription"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textGrossWeight"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textMeasurement"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textTotalPackages"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textPlaceandDateofIssue"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textSignedfortheCarrier"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type="textBLstatus"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    button[type = "billofladingadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "productadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "letterofcreditadd"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "productupdate"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+    button[type = "productroutequery"]{
+    width: 150px;
+    height: 30px;
+    padding-right: 15px;
+    }
+
+
+
+    input[type = "textproductid"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductname"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcompanyname"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchtime"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceivetime"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceiveamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textprice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textexporter"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textconsignee"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textmeansoftransportandroute"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textincoterns"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbilloflading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textnumberanddateofinvoice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcertificatenumber"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcompanyaddress"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdangerousorflammablecargo"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductstatus"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductidupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceivetimeupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchtimeupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textreceiveamountupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdispatchamountupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdangerousorflammablecargoupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductstatusupdateB"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textshipperC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textnotifypartyC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "texttelephoneC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textairlinenameC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textportofloadingC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textportofdischargeC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdestinationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textloadingC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdurationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textsettlementwayC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdomestictransportationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcargostoragelocationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcontainershipmentsC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcabinetrequirementsC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcargoinformationC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textnetweightC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textgrossweightC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textsizeC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textsignatureC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textshippingfreightprepaidC"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textapplicationdate"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcommercialinvoice"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textconfirmation"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textapplicant"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbilloflading"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textstartendpoint"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textmethodofinfo"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textmarineinsurancepolicy"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textfinalshipment"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textletterofcreditamount"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textotherdocuments"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textpartialshipment"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textvalidationdate"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbeneficiarystatement"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "texttransport"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbeneficiary"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textcargocontent"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textdrawer"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textspecialterms"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textbillofexchangedeadline"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "texttransferrules"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductexportcountry"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductimportcountry"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductexportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductimportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type= "queryproductrouteexport"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    /*2020/7/20 新加的*/
+    input[type= "textproductrouteexportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type= "textproductrouteimportcountryquery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textproductroutequery"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+    input[type = "textPrivateKey"]{
+    width: 150px;
+    height: 25px;
+    padding-right: 15px;
+    }
+
+
+
+
+    /*2020/4/9 add the class dialog*/
+    /*不需使用,已用message box 取代*/
+    /*.dialog{
+
+        position: fixed;
+        top : 100px;
+        left : 50%;
+        width: 400px;
+        height: 150px;
+        border: 1px solid #556B2F;
+        background-color: #F0FFF0;
+        box-shadow: 0px 0px 10px #006400;
+        transform: translate(-125px, 0px);
+        display: none;
+    }*/
+  </style>
+</head>
+
+<body class="container" style="width:1200px;">
+<h2 style="text-align:center">物流資訊平台</h2>
+<div id="product_logout_Importer">
+    <ul class="nav nav-tabs">
+        <li><a data-toggle="tab" href="#sectionB" id="product_tab"><i class="fa fa-user"></i> Product</a></li>
+        <li><a data-toggle="tab" href="#sectionC" id="shipping_order_tab"><i class="fa fa-ship"></i> Shipping Order</a></li>
+        <li class="active"><a>登出</a></li>
+        <li class="main-active"><a>回主畫面</a></li>
+    </ul>
+</div>
+<div class="tab-content">
+    <form id="sectionB" class="tab-pane fade">
+        <div class="panel panel-default margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">貨物資訊</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+
+                    <tbody>
+
+                    <tr>
+                        <td colspan="6" >貨物流水號:</td>
+                        <td colspan="24">
+                            <input type="text" class="form-control text-center" id="productCodeB" placeholder="Product ID" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <div align="center" style="position:relative;top:10px">
+                            <td colspan="24" style="text-align:center" align="center">
+                                <button id="okBtnB" class="btn">提交</button>
+                            </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td colspan="6" >貨物名稱:</td>
+                        <td id="productNameB"></td>
+
+                        <td colspan="6" >公司名稱:</td>
+                        <td id="companyNameB"></td>
+
+                        <td colspan="6">派送時間:</td>
+                        <td id="dispatchTimeB"></td>
+
+                        <td colspan="6">收貨時間:</td>
+                        <td id="receiveTimeB"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6">派送量:</td>
+                        <td id="dispatchAmountB"></td>
+
+                        <td colspan="6">收貨量:</td>
+                        <td id="receiveAmountB"></td>
+
+                        <td colspan="6">價錢:</td>
+                        <td id="priceB"></td>
+
+                        <td colspan="6">出口商:</td>
+                        <td id="exporterB"></td>
+
+                    </tr>
+                    <tr>
+
+                        <td colspan="6">收貨人:</td>
+                        <td id="consigneeB"></td>
+
+                        <td colspan="6">運輸方式和路線:</td>
+                        <td id="meansoftransportandrouteB"></td>
+
+                        <td colspan="6">價格條件:</td>
+                        <td id="incoternsB"></td>
+
+                        <td colspan="6">提單:</td>
+                        <td id="billofladingB"></td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6">發票編號和日期:</td>
+                        <td id="numberanddateofinvoiceB"></td>
+
+                        <td colspan="6">產品證明號碼:</td>
+                        <td id="certificatenumberB"></td>
+
+                        <td colspan="6">公司地址:</td>
+                        <td id="companyaddressB"></td>
+
+                        <td colspan="6">危險物標註:</td>
+                        <td id="dangerousorflammablecargoB"></td>
+
+
+                    </tr>
+                    <tr>
+
+                        <td colspan="6">貨物狀況:</td>
+                        <td id="productstatusB"></td>
+
+                        <td colspan="6">貨物登記時間</td>
+                        <td id ="productregisteredtimeB" ></td>
+
+                        <td colspan="6">貨物登記日期</td>
+                        <td id ="productregistereddayB" ></td>
+
+                        <td colspan="6">貨物更新時間</td>
+                        <td id ="productupdatedtimeB" ></td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6">貨物更新日期</td>
+                        <td id ="productupdateddayB" ></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6">
+                            <button id="okBtnClearB" class="btn">清除</button>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form action="/product/updateproduct" method="post">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">貨物更新</h3>
+                </div>
+                <div class="panel-body">
+                    <div style="height: 100px;overflow:scroll;">
+                        <table class="table table-striped">
+
+                            <tbody>
+
+                            <tr>
+
+                                <td>貨物流水號:</td>
+                                <td>
+                                    <input type="text" class="form-control text-center" id="productidupdateB" name="productidupdateB" placeholder="Product ID" >
+                                </td>
+
+                                <td>收貨時間:</td>
+                                <td>
+                                    <input type="text" class="form-control text-center" id="receivetimeupdateB" name="receivetimeupdateB" placeholder="Receive Time" >
+                                </td>
+
+                                <td>派送時間:</td>
+                                <td>
+                                    <input type="text" class="form-control text-center" id="dispatchtimeupdateB" name="dispatchtimeupdateB"  placeholder="Dispatch Time" >
+                                </td>
+
+                                <td>收貨量:</td>
+                                <td>
+                                    <input type="text" class="form-control text-center" id="receiveamountupdateB" name="receiveamountupdateB" placeholder="Receive Amount" >
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>派送量:</td>
+                                <td>
+                                    <input type="text" class="form-control text-center" id="dispatchamountupdateB" name="dispatchamountupdateB" placeholder="Dispatch Amount" >
+                                </td>
+
+                                <td>危險物標註:</td>
+                                <td>
+                                    <input type="text" class="form-control text-center" id="dangerousorflammablecargoupdateB" placeholder="Dangerous or Flammable Cargo" >
+                                </td>
+
+                                <td>貨物狀況:</td>
+                                <td>
+                                    <input type="textproductstatusupdateB" class="form-control text-center" id="productstatusupdateB" placeholder="Product Status" >
+                                </td>
+
+                                <td style="text-align:center">
+                                    <button type = "productupdate" id="okBtnnewUpdateB" class="btn">更新</button>
+                                </td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form action="/product/addproduct" method="post">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">新增貨物</h3>
+                </div>
+                <div class="panel-body" >
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>貨物名稱:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addproductnameB" name="addproductnameB" placeholder="Product Name" >
+                            </td>
+
+                            <td>公司名稱:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addcompanynameB" name="addcompanynameB" placeholder="Company Name" >
+                            </td>
+
+                            <td>派送時間:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="adddispatchtimeB" name="adddispatchtimeB" placeholder="Dispatch Time" >
+                            </td>
+
+                            <td>收貨時間:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addreceivetimeB" name="addreceivetimeB" placeholder="Receive Time" >
+                            </td>
+
+                        </tr>
+                        <tr>
+
+                            <td>派送量:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="adddispatchamountB" name="adddispatchamountB" placeholder="Dispatch Amount" >
+                            </td>
+
+                            <td>收貨量:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addreceiveamountB" name="addreceiveamountB" placeholder="Receive Amount" >
+                            </td>
+
+                            <td>價格:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addpriceB" name="addpriceB" placeholder="Price" >
+                            </td>
+
+                            <td>出口商:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addexporterB" name="addexporterB" placeholder="Exporter" >
+                            </td>
+
+                        </tr>
+                        <tr>
+
+                            <td>收貨人:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addconsigneeB"  name="addconsigneeB" placeholder="Consignee" >
+                            </td>
+
+                            <td>運輸方式和路線:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addmeansoftransportandrouteB" name="addmeansoftransportandrouteB" placeholder="Means of Transport and Route" >
+                            </td>
+
+                            <td>價格條件:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addincoternsB" name="addincoternsB" placeholder="Incoterns" >
+                            </td>
+
+
+                            <td>提單:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addbillofladingB" name="addbillofladingB" placeholder="Bill of Lading" >
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+
+                            <td>發票編號和日期:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addnumberanddateofinvoiceB" name="addnumberanddateofinvoiceB" placeholder="Number and Date of Invoice" >
+                            </td>
+
+                            <td>產品證明號碼:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addcertificatenumberB" name="addcertificatenumberB" placeholder="Certificate Number" >
+                            </td>
+
+                            <td>公司地址:</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addcompanyaddressB" name="addcompanyaddressB" placeholder="Company Address" >
+                            </td>
+
+                            <td>危險物標註(選填):</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="adddangerousorflammablecargoB" name="adddangerousorflammablecargoB" placeholder="Dangerous Or Flammable Cargo">
+                            </td>
+
+                        </tr>
+                        <tr>
+
+
+                            <td>貨物狀況(選填):</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addproductstatusB" name="addproductstatusB" placeholder="Product Status" >
+                            </td>
+
+                            <td>出口國家</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addproductexportcountryB" name="addproductexportcountryB" placeholder="Product Export Country" >
+                            </td>
+
+                            <td>進口國家</td>
+                            <td>
+                                <input type="text" class="form-control text-center" id="addproductimportcountryB" name="addproductimportcountryB" placeholder="Product Import Country" >
+                            </td>
+
+                            <td>私鑰:</td>
+                            <td>
+                                <input type="text" class="form-control text center" id="addPrivateKeyB" name="addPrivateKeyB" style="text-align: center" placeholder="PrivateKey" >
+                            </td>
+
+                        </tr>
+                        <tr>
+
+                            <td style="text-align:center">
+                                <button type ="submit" id="okBtnUpdateB" class="btn"> 新增 </button>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="sectionC" class="tab-pane fade">
+        <div class="panel panel-success margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">訂艙單資訊</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+
+                    <tbody>
+
+                    <tr>
+                        <td colspan="6" >訂艙單號碼:</td>
+                        <td colspan="24">
+                            <input type="text" class="form-control text-center" id="shippingordercodeC" placeholder="Shipping Order ID" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <div align="center" style="position:relative;top:10px">
+                            <td colspan="24" style="text-align:center" align="center">
+                                <button id="okBtnCshippingorder" class="btn btn-success">提交</button>
+                            </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td colspan="6" >發貨人:</td>
+                        <td id="shipperC"></td>
+
+                        <td colspan="6" >收貨人:</td>
+                        <td id="consigneeC"></td>
+
+                        <td colspan="6">通知人:</td>
+                        <td id="notifypartyC"></td>
+
+                        <td colspan="6">電話:</td>
+                        <td id="telephoneC"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" >航次:</td>
+                        <td id="flightnumberC"></td>
+
+                        <td colspan="6" >裝貨港:</td>
+                        <td id="portofloadingC"></td>
+
+                        <td colspan="6">卸貨港:</td>
+                        <td id="portofdischargeC"></td>
+
+                        <td colspan="6">目的地:</td>
+                        <td id="destinationC"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" >裝期:</td>
+                        <td id="loadingC"></td>
+
+                        <td colspan="6" >效期:</td>
+                        <td id="durationC"></td>
+
+                        <td colspan="6">價格條件:</td>
+                        <td id="incotermsC"></td>
+
+                        <td colspan="6">結匯方式:</td>
+                        <td id="settlementwayC"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" >國內運輸方式:</td>
+                        <td id="domestictransportationC"></td>
+
+                        <td colspan="6" >貨物存放地點:</td>
+                        <td id="cargostoragelocationC"></td>
+
+                        <td colspan="6">貨櫃出運數:</td>
+                        <td id="containershipmentsC"></td>
+
+                        <td colspan="6">用櫃要求:</td>
+                        <td id="cabinetrequirementsC"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" >數量:</td>
+                        <td id="amountC"></td>
+
+                        <td colspan="6" >貨物資訊:</td>
+                        <td id="cargoinformationC"></td>
+
+                        <td colspan="6">淨重:</td>
+                        <td id="netweightC"></td>
+
+                        <td colspan="6">毛重:</td>
+                        <td id="grossweightC"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="6" >尺寸:</td>
+                        <td id="sizeC"></td>
+
+                        <td colspan="6" >簽章:</td>
+                        <td id="signatureC"></td>
+
+                        <td colspan="6">危險物標註:</td>
+                        <td id="dangerousorflammablecargoC"></td>
+
+                        <td colspan="6">海運運費預付:</td>
+                        <td id="shippingfreightprepaidC"></td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td colspan="6">
+                            <button id="okBtnClearC" class="btn btn-success">清除</button>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success margin-top-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">貨物之訂艙單查詢</h3>
+            </div>
+            <div class="panel-body" >
+                <table class="table table-striped">
+                    <tbody>
+
+                    <tr>
+                        <td colspan="6" >貨物號碼:</td>
+                        <td colspan="24">
+                            <input type="text" class="form-control text-center" id="shippingorderfromproductC" placeholder="Product ID" >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <div align="center" style="position:relative;top:10px">
+                            <td colspan="24" style="text-align:center" align="center">
+                                <button id="okBtnCheckC" class="btn btn-success">查詢</button>
+                            </td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="6">收貨人:</td>
+                        <td id="consigneefromproductC"></td>
+
+                        <td colspan="6">危險物標註:</td>
+                        <td id="dangerousorflammablecargofromproductC"></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">新增訂艙單</h3>
+            </div>
+            <div class="panel-body" >
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+
+                        <td>發貨人:</td>
+                        <td >
+                            <input type="textshipperC" class="form-control text-center" id="addshipperC" style="text-align: center" placeholder="Shipper" >
+                        </td>
+
+                        <td>通知人:</td>
+                        <td>
+                            <input type="textnotifypartyC" class="form-control text-center" id="addnotifypartyC"
+                                   placeholder="Notify Party" >
+                        </td>
+
+                        <td>電話:</td>
+                        <td>
+                            <input type="texttelephoneC" class="form-control text-center" id="addtelephoneC" placeholder="Telephone" >
+                        </td>
+
+                        <td>航次:</td>
+                        <td>
+                            <input type="textairlinenameC" class="form-control text-center" id="addairlinenameC" placeholder="Airline name" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>裝貨港:</td>
+                        <td>
+                            <input type="textportofloadingC" class="form-control text-center" id="addportofloadingC" placeholder="Port of loading" >
+                        </td>
+
+                        <td>卸貨港:</td>
+                        <td>
+                            <input type="textportofdischargeC" class="form-control text-center" id="addportofdischargeC" placeholder="Port of discharge" >
+                        </td>
+
+                        <td>目的地:</td>
+                        <td>
+                            <input type="textdestinationC" class="form-control text-center" id="adddestinationC" placeholder="Destination" >
+                        </td>
+
+                        <td>裝期:</td>
+                        <td>
+                            <input type="textloadingC" class="form-control text-center" id="addloadingC" placeholder="Loading" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>效期:</td>
+                        <td>
+                            <input type="textdurationC" class="form-control text-center" id="adddurationC" placeholder="Duration" >
+                        </td>
+
+                        <td>結匯方式:</td>
+                        <td>
+                            <input type="textsettlementwayC" class="form-control text-center" id="addsettlementwayC" placeholder="Settlement way" >
+                        </td>
+
+                        <td>國內運輸方式:</td>
+                        <td>
+                            <input type="textdomestictransportationC" class="form-control text-center" id="adddomestictransportationC" placeholder="Domestic transportation" >
+                        </td>
+
+                        <td>貨物存放地點:</td>
+                        <td>
+                            <input type="textcargostoragelocationC" class="form-control text-center" id="addcargostoragelocationC" placeholder="Cargo storage location" >
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>貨櫃出運數:</td>
+                        <td>
+                            <input type="textcontainershipmentsC" class="form-control text-center" id="addcontainershipmentsC" placeholder="Container shipments" >
+                        </td>
+
+                        <td>用櫃要求:</td>
+                        <td>
+                            <input type="textcabinetrequirementsC" class="form-control text-center" id="addcabinetrequirementsC" placeholder="Cabinet requirements" >
+                        </td>
+
+                        <td>貨物資訊:</td>
+                        <td>
+                            <input type="textcargoinformationC" class="form-control text-center" id="addcargoinformationC" placeholder="Cargo Information" >
+                        </td>
+
+                        <td>淨重:</td>
+                        <td>
+                            <input type="textnetweightC" class="form-control text-center" id="addnetweightC"
+                                   placeholder="Net weight" >
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>毛重:</td>
+                        <td>
+                            <input type="textgrossweightC" class="form-control text-center" id="addgrossweightC"
+                                   placeholder="Gross weight" >
+                        </td>
+
+                        <td>尺寸</td>
+                        <td>
+                            <input type="textsizeC" class="form-control text-center" id="addsizeC"
+                                   placeholder="Size" >
+                        </td>
+
+                        <td>簽章</td>
+                        <td>
+                            <input type="textsignatureC" class="form-control text-center" id="addsignatureC"
+                                   placeholder="Signature" >
+                        </td>
+
+                        <td>海運運費預付</td>
+                        <td>
+                            <input type="textshippingfreightprepaidC" class="form-control text-center" id="addshippingfreightprepaidC"
+                                   placeholder="Shipping freight prepaid" >
+                        </td>
+
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <button type ="shippingorderadd" id="okBtnUpdateC" class="btn btn-success"> 新增 </button>
+                        </td>
+
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./routes/product.js"></script>
+
+</html>

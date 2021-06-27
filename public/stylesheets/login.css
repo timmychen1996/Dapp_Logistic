@@ -1,0 +1,99 @@
+html,body {
+  height: 100%;
+}
+
+body.my-login-page {
+  background-color: #f7f9fb;
+  font-size: 14px;
+}
+
+.my-login-page .brand {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,.05);
+  position: relative;
+  z-index: 1;
+}
+
+.my-login-page .brand img {
+  width: 100%;
+}
+
+.my-login-page .container {
+
+  margin: 150px auto;
+
+}
+
+.my-login-page .card-wrapper {
+  width: 600px;
+}
+
+.my-login-page .card {
+
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+  display: 
+}
+
+.my-login-page .card.fat {
+  padding: 10px;
+}
+
+
+.my-login-page .card-img-top {
+  width: 25%;
+  height: 15vh;
+  object-fit: cover;
+}
+
+/* .card-body 與 .card-title-a 之間需要空一格才表示.card-title-b在.card-body裡面*/
+.my-login-page .card-body .card-title-a {
+
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.my-login-page .card-wrapper .card-title-b {
+
+  position: relative;
+  font-size: 12px;
+  top: 15px;
+  margin-bottom: 15px;
+}
+
+
+.my-login-page .form-control {
+  border-width: 2.3px;
+}
+
+.my-login-page .form-group label {
+  width: 100%;
+}
+
+.my-login-page .btn.btn-block {
+  padding: 12px 10px;
+}
+
+.my-login-page .card.fat .card-body {
+  padding: 15px;
+}
+
+.my-login-page .form-group m-0 .btn btn-info {
+  
+  margin: 0 auto;
+  width: 150%;
+}
+
+
+
+
+
+
+
+
+
+
